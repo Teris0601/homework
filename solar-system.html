@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        .box {
+            width: 100%;
+            height: 3000px;
+            perspective: 2000px;
+            background-color: #bcbccf;
+            background-image: url(img/xk.jpg);
+        }
+        
+        .box1 {
+            width: 100%;
+            height: 3000px;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        
+        .box1 li {
+            list-style: none;
+            border-radius: 50%;
+        }
+        
+        .sun {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 700px;
+            top: 600px;
+            background-color: #9f040c;
+            z-index: 2000;
+            box-shadow: 0 0 100px red;
+            animation: sPread 5s linear 0s infinite;
+        }
+        
+        @-webkit-keyframes sPread {
+            from {
+                box-shadow: 0 0 0px red;
+            }
+            to {
+                box-shadow: 0 0 199px red;
+            }
+        }
+        
+        .waterStar {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 650px;
+            top: 550px;
+            z-index: 18;
+            border: 1px solid white;
+            transform: rotateX(50deg);
+            animation: move1 4s linear 0s infinite;
+        }
+        
+        @-webkit-keyframes move1 {
+            from {
+                tranforms: rotate(0deg);
+            }
+            to {
+                tranforms: rotate(360deg);
+            }
+        }
+        
+        .goldStar {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 600px;
+            top: 500px;
+            border: 1px solid white;
+            transform: rotateX(50deg);
+        }
+        
+        .earth {
+            width: 400px;
+            height: 400px;
+            position: absolute;
+            left: 550px;
+            top: 450px;
+            border: 1px solid white;
+            transform: rotateX(50deg);
+        }
+        
+        .fireStar {
+            width: 550px;
+            height: 550px;
+            position: absolute;
+            left: 475px;
+            top: 375px;
+            border: 1px solid white;
+            transform: rotateX(50deg);
+        }
+        
+        .treeStar {
+            width: 750px;
+            height: 750px;
+            position: absolute;
+            left: 375px;
+            top: 275px;
+            border: 1px solid white;
+            transform: rotateX(50deg) rotateY(150deg);
+        }
+        
+        .earthStar {
+            width: 950px;
+            height: 950px;
+            position: absolute;
+            left: 275px;
+            top: 175px;
+            border: 1px solid white;
+            transform: rotateX(50deg) rotateY(170deg);
+        }
+        
+        .skyStar {
+            width: 1250px;
+            height: 1250px;
+            position: absolute;
+            left: 125px;
+            top: 25px;
+            border: 1px solid white;
+            transform: rotateX(50deg) rotateY(195deg);
+        }
+        
+        .oceanStar {
+            width: 1550px;
+            height: 1550px;
+            position: absolute;
+            left: -25px;
+            top: -125px;
+            border: 1px solid white;
+            transform: rotateX(50deg) rotateY(170deg);
+        }
+        
+        .Star1 {
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            left: 510px;
+            top: 524px;
+            z-index: 2;
+            opacity: 0;
+        }
+        
+        .Star1 {
+            width: 27px;
+            height: 27px;
+            margin-left: 124px;
+            margin-top: 90px;
+            animation: plan_11 0.5s 2.5s linear forwards;
+        }
+        
+        .Star1 span {
+            width: 27px;
+            height: 27px;
+            display: block;
+            animation: plan_12 10s 0s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        .Star1 i {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            display: block;
+            background: green;
+            background-size: 100% 100%;
+            animation: plan_13 10s 2.5s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        @keyframes plan_11 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes plan_12 {
+            0%,
+            100% {
+                transform: translateX(0px);
+            }
+            50% {
+                transform: translateX(200px);
+            }
+        }
+        
+        @keyframes plan_13 {
+            0%,
+            100% {
+                transform: translateY(0px) scale(0.8);
+            }
+            50% {
+                transform: translateY(50px) scale(1);
+            }
+        }
+        
+        .Star2 {
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            left: 478px;
+            top: 503px;
+            z-index: 2;
+            opacity: 0;
+        }
+        
+        .Star2 {
+            width: 27px;
+            height: 27px;
+            margin-left: 124px;
+            margin-top: 90px;
+            animation: plan_21 0.5s 2.5s linear forwards;
+        }
+        
+        .Star2 span {
+            width: 27px;
+            height: 27px;
+            display: block;
+            animation: plan_22 10s 0s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        .Star2 i {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            display: block;
+            background: gold;
+            background-size: 100% 100%;
+            animation: plan_23 10s 2.5s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        @keyframes plan_21 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes plan_22 {
+            0%,
+            100% {
+                transform: translateX(0px);
+            }
+            50% {
+                transform: translateX(292px);
+            }
+        }
+        
+        @keyframes plan_23 {
+            0%,
+            100% {
+                transform: translateY(0px) scale(0.8);
+            }
+            50% {
+                transform: translateY(98px) scale(1);
+            }
+        }
+        
+        .Star3 {
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            left: 417px;
+            top: 486px;
+            z-index: 2;
+            opacity: 0;
+        }
+        
+        .Star3 {
+            width: 27px;
+            height: 27px;
+            margin-left: 124px;
+            margin-top: 90px;
+            animation: plan_31 0.5s 2.5s linear forwards;
+        }
+        
+        .Star3 span {
+            width: 27px;
+            height: 27px;
+            display: block;
+            animation: plan_32 10s 0s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        .Star3 i {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            display: block;
+            background: blue;
+            background-size: 100% 100%;
+            animation: plan_33 10s 2.5s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        @keyframes plan_31 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes plan_32 {
+            0%,
+            100% {
+                transform: translateX(0px);
+            }
+            50% {
+                transform: translateX(392px);
+            }
+        }
+        
+        @keyframes plan_33 {
+            0%,
+            100% {
+                transform: translateY(0px) scale(0.8);
+            }
+            50% {
+                transform: translateY(138px) scale(1);
+            }
+        }
+        
+        .Star4 {
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            left: 350px;
+            top: 470px;
+            z-index: 2;
+            opacity: 0;
+        }
+        
+        .Star4 {
+            width: 27px;
+            height: 27px;
+            margin-left: 124px;
+            margin-top: 90px;
+            animation: plan_41 0.5s 2.5s linear forwards;
+        }
+        
+        .Star4 span {
+            width: 27px;
+            height: 27px;
+            display: block;
+            animation: plan_42 10s 0s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        .Star4 i {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            display: block;
+            background: #48a68e;
+            background-size: 100% 100%;
+            animation: plan_43 10s 2.5s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        @keyframes plan_41 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes plan_42 {
+            0%,
+            100% {
+                transform: translateX(0px);
+            }
+            50% {
+                transform: translateX(540px);
+            }
+        }
+        
+        @keyframes plan_43 {
+            0%,
+            100% {
+                transform: translateY(0px) scale(0.8);
+            }
+            50% {
+                transform: translateY(168px) scale(1);
+            }
+        }
+        
+        .Star5 {
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            left: 306px;
+            top: 608px;
+            z-index: 2;
+            opacity: 0;
+        }
+        
+        .Star5 {
+            width: 27px;
+            height: 27px;
+            margin-left: 124px;
+            margin-top: 90px;
+            animation: plan_51 0.5s 2.5s linear forwards;
+        }
+        
+        .Star5 span {
+            width: 27px;
+            height: 27px;
+            display: block;
+            animation: plan_52 10s 0s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        .Star5 i {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            display: block;
+            background: orange;
+            background-size: 100% 100%;
+            animation: plan_53 10s 2.5s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        @keyframes plan_51 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes plan_52 {
+            0%,
+            100% {
+                transform: translateX(0px) translateY(0px);
+            }
+            50% {
+                transform: translateX(676px) translateY(-352px);
+            }
+        }
+        
+        @keyframes plan_53 {
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px) scale(0.8);
+            }
+            50% {
+                transform: translateY(100px) translateY(159px) scale(1);
+            }
+        }
+        
+        .Star6 {
+            position: absolute;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            left: 101px;
+            top: 533px;
+            z-index: 2;
+            opacity: 0;
+        }
+        
+        .Star6 {
+            width: 27px;
+            height: 27px;
+            margin-left: 124px;
+            margin-top: 90px;
+            animation: plan_61 0.5s 2.5s linear forwards;
+        }
+        
+        .Star6 span {
+            width: 27px;
+            height: 27px;
+            display: block;
+            animation: plan_62 10s 0s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        .Star6 i {
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            display: block;
+            background: pink;
+            background-size: 100% 100%;
+            animation: plan_63 10s 2.5s ease-in-out infinite;
+            z-index: 3000;
+        }
+        
+        @keyframes plan_61 {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        
+        @keyframes plan_62 {
+            0%,
+            100% {
+                transform: translateX(0px) translateY(0px);
+            }
+            50% {
+                transform: translateX(916px) translateY(-208px);
+            }
+        }
+        
+        @keyframes plan_63 {
+            0%,
+            100% {
+                transform: translateY(0px) translateX(0px) scale(0.8);
+            }
+            50% {
+                transform: translateY(288px) translateX(159px) scale(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <ul class="box1">
+            <li class="sun"></li>
+
+            <li class="waterStar"></li>
+            <li class="Star1">
+                <span><i></i></span>
+            </li>
+            <li class="goldStar"></li>
+            <li class="Star2">
+                <span><i></i></span>
+            </li>
+
+            <li class="earth"></li>
+            <li class="Star3">
+                <span><i></i></span>
+            </li>
+            <li class="fireStar"></li>
+            <li class="Star4">
+                <span><i></i></span>
+            </li>
+            <li class="treeStar"></li>
+            <li class="Star5">
+                <span><i></i></span>
+            </li>
+            <li class="earthStar"></li>
+            <li class="Star6">
+                <span><i></i></span>
+            </li>
+            <li class="skyStar"></li>
+            <li class="oceanStar"></li>
+
+        </ul>
+
+    </div>
+</body>
+
+</html>
