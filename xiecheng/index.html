@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        html {
+            font-size: 12px;
+        }
+        
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            background-color: grey;
+        }
+        
+        .search {
+            width: 100%;
+            height: 5rem;
+            float: left;
+            padding: 0.5rem 0 0 0;
+            border-bottom: 0.1rem solid grey;
+            /*  position: fixed;
+            top: 0;
+            left: 0;*/
+        }
+        
+        #search {
+            width: 75%;
+            height: 2rem;
+            float: left;
+            border-radius: 0.5rem;
+            margin: 1rem 0 0 2rem;
+        }
+        
+        .Hpicture {
+            width: 12%;
+            height: 4rem;
+            margin-left: 1rem;
+            color: blue;
+            float: left;
+        }
+        
+        .Hpicture p {
+            word-spacing: 1rem;
+        }
+        
+        .banner {
+            width: 100%;
+            height: 7rem;
+            float: left;
+            background-color: pink;
+        }
+        
+        .tablE {
+            width: 100%;
+            float: left;
+            text-align: center;
+            font-size: 1.5rem;
+            color: white;
+            line-height: 3rem;
+        }
+        
+        .row {
+            width: 95%;
+            height: 6rem;
+            margin: 0.5rem auto;
+            border-radius: 0.5rem;
+        }
+        
+        .row1 {
+            background-color: pink;
+        }
+        
+        .row2 {
+            background-color: blue;
+        }
+        
+        .row3 {
+            background-color: green;
+        }
+        
+        .row4 {
+            background-color: orange;
+        }
+        
+        .col {
+            width: 33.3333%;
+            height: 100%;
+            box-sizing: border-box;
+            float: left
+        }
+        
+        .col {
+            border: 0.1rem solid white;
+        }
+        
+        .col3 {
+            border-bottom: 0.1rem solid white;
+        }
+        
+        .table2 {
+            width: 100%;
+            float: left;
+        }
+        
+        .table2 ul {
+            width: 95%;
+            margin: 0 auto;
+        }
+        
+        .table2 ul li {
+            width: 25%;
+            height: 5rem;
+            float: left;
+            list-style: none;
+            position: relative;
+            border-bottom: 0.1rem solid white;
+            border-right: 0.1rem solid white;
+            box-sizing: border-box;
+            background-color: grey;
+            text-align: center;
+        }
+        
+        .icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            float: left;
+            background: url("img2/images/ttb_01.gif") no-repeat center;
+            background-size: cover;
+            position: absolute;
+            left: 42%;
+            top: 16%;
+        }
+        
+        .table2 ul li span {
+            position: absolute;
+            left: 35%;
+            top: 55%;
+        }
+        
+        .section {
+            width: 100%;
+            float: left;
+        }
+        
+        .sec {
+            width: 95%;
+            margin: 1rem auto;
+        }
+        
+        .arc{
+            display: block;
+            float: right;
+            text-decoration: none;
+            font-size: 0.8rem;
+            color: white;
+            background-color: red;
+            padding: 0.2rem 0.8rem;
+            border-radius: 0.4rem;
+        }
+        
+        .sec1 {
+            width: 100%;
+        }
+        
+        .sec1L {
+            width: 50%;
+            height: 24rem;
+            float: left;
+        }
+        
+        .sec1R {
+            width: 50%;
+            height: 24rem;
+            float: left;
+        }
+        
+        .img1 {
+            width: 100%;
+            height: 16rem;
+            float: left;
+
+        }
+        .sec1L1{
+            width: 100%;
+            height: 8rem;
+            float: left;
+        }
+        .secH{
+            margin:1rem 0 0 0;
+            font-size: 1.8rem;
+        }
+        .secA{
+            display: block;
+            width: 50%;
+            height: 1.8rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+            line-height: 1.8rem;
+            border:0.1rem solid blue;
+            text-align: center;
+            margin-top: 0.5rem;
+            border-radius: 0.8rem;
+        }
+        .book{
+            width:100%;
+            float:left;
+            margin-top: 2rem;
+        }
+        #book{
+            width:95%;
+            margin:0 auto;
+        }
+        .bookuL{
+            width:100%;
+            float:left;
+        }
+        .bookuL li{
+             width:33.333%;
+             float:left;
+            list-style: none;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        a{
+            text-decoration: none;
+        }
+        .footer{
+            width:100%;
+            float:left;
+        }
+        #footer{
+            width:95%;
+            margin:1.5rem  auto;
+        }
+        #footer ul{
+            width:100%;
+            height: 2rem;
+
+        }
+        #footer>ul>li{
+            list-style: none;
+            float: left;
+            width: 30%;
+            border-right: 0.1rem solid grey;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+        #footer>ul>li:nth-child(1){
+            margin-left: 8%;
+        }
+        #footer p{
+            text-align: center;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="search">
+            <input type="" name="" value="" id="search" placeholder="搜索：目的地/酒店/景点/航班号">
+            <div class="Hpicture"><img src="img2/touxiang.png" alt="">
+                <p>我的</p>
+            </div>
+        </div>
+
+        <div class="banner">
+
+        </div>
+
+        <div class="tablE">
+            <div class="row row1">
+                <div class="col col1 col2">酒店</div>
+                <div class="col col1">
+                    <div class="cols col3">海外酒店</div>
+                    <div class="cols">特价酒店</div>
+                </div>
+                <div class="col">
+                    <div class="cols">
+                        <div class="cols col3">团购</div>
+                        <div class="cols">民宿.客栈</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row row2">
+                <div class="col col1 col2">机票</div>
+                <div class="col col1">
+                    <div class="cols col3">火车票.抢票</div>
+                    <div class="cols">特价机票</div>
+                </div>
+                <div class="col">
+                    <div class="cols col3">汽车票.船票</div>
+                    <div class="cols">专车.租车</div>
+                </div>
+            </div>
+            <div class="row row3">
+                <div class="col col1 col2">旅游</div>
+                <div class="col col1">
+                    <div class="cols col3">目的地攻略</div>
+                    <div class="cols">周边游</div>
+                </div>
+                <div class="col">
+                    <div class="cols col3">游轮</div>
+                    <div class="cols">定制旅游</div>
+                </div>
+            </div>
+            <div class="row row4">
+                <div class="col col1">
+                    <div class="cols col3">景点.玩乐</div>
+                    <div class="cols">礼品卡</div>
+                </div>
+                <div class="col col1">
+                    <div class="cols col3">美食林</div>
+                    <div class="cols">WiFi.电话卡</div>
+                </div>
+                <div class="col">
+                    <div class="cols col3">全球汇.换汇</div>
+                    <div class="cols">保险.签证</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="table2">
+            <ul>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+                <li>
+                    <i class="icon"></i>
+                    <span>自由行</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <div class="sec">
+                <h2>
+                    <span>特卖汇</span>
+                    <a href="" class="arc">领红包在下单 ></a>
+                </h2>
+                <div class="sec1">
+                    <div class="sec1L">
+                        <div>
+                            <a href="">
+                                <img src="img2/xc1.jpg" alt="" class="img1">
+                            </a>
+                            <div class="sec1L1">
+                                <h2 class="secH"> 现场看明星</h2>
+                                <a href="" class="secA">限时送票</a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="sec1R">
+                        <div class="sec1L1">
+                            <h2 class="secH"> 信演唱会</h2>
+                            <a href="" class="secA">赢后台见面</a>
+
+                        </div>
+                        <div class="sec1L1">
+                            <h2 class="secH"> 超值旅行用品</h2>
+                            <a href="" class="secA">好物1元抢</a>
+
+                        </div>
+                        <div class="sec1L1">
+                            <h2 class="secH"> 小猪佩奇</h2>
+                            <a href="" class="secA">欢乐游园会</a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+       <div class="book">
+           <div id="book">
+               <ul class="bookuL">
+                   <li><img src="img2/images/ttb_01.gif" alt="" style="width:2rem;height: 1.5rem; margin-left:5%;">
+                       <p><a href="">电话预定</a></p></li>
+                   <li><img src="img2/images/ttb_01.gif" alt="" style="width:2rem;height: 1.5rem; margin-left:5%;">
+                       <p><a href="">下载客户端</a></p></li>
+                   <li><img src="img2/images/ttb_01.gif" alt="" style="width:2rem;height: 1.5rem; margin-left:5%;">
+                       <p><a href="">我的</a></p></li>
+               </ul>
+           </div>
+       </div>
+
+
+    <div class="footer">
+        <div id="footer">
+            <ul>
+                <li>网站地图</li>
+                <li>Global sites</li>
+                <li style="border-right: none;">电脑版</li>
+            </ul>
+            <p>&copy;2017携程旅行|沪ICP备08023580号</p>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>
