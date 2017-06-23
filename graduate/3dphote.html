@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        body {
+            background: black;
+        }
+        
+        #box1 {
+            perspective: 2000px;
+        }
+        
+        #box {
+            width: 400px;
+            height: 300px;
+            position: relative;
+            margin: 100px 0 0 500px;
+            transform-style: preserve-3d;
+            transition: all 1s ease 0s;
+            animation: move 60s linear 0s infinite;
+        }
+        
+        #box li {
+            width: 400px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            list-style: none;
+        }
+        
+        #box li img {
+            width: 400px;
+            height: 300px;
+            -webkit-box-reflect: below 10px -webkit-linear-gradient( top, rgba(0, 0, 0, 0)50%, rgba(0, 0, 0, 0.5)100%);
+        }
+        
+        #box li:nth-child(1) {
+            transform: translateZ(600px);
+            z-index: 2;
+        }
+        
+        #box li:nth-child(2) {
+            transform: rotateY(40deg) translateZ(600px);
+        }
+        
+        #box li:nth-child(3) {
+            transform: rotateY(80deg) translateZ(600px);
+        }
+        
+        #box li:nth-child(4) {
+            transform: rotateY(120deg) translateZ(600px);
+        }
+        
+        #box li:nth-child(5) {
+            transform: rotateY(160deg) translateZ(600px);
+        }
+        
+        #box li:nth-child(6) {
+            transform: rotateY(200deg) translateZ(600px);
+        }
+        
+        #box li:nth-child(7) {
+            transform: rotateY(240deg) translateZ(600px);
+        }
+        
+        #box li:nth-child(8) {
+            transform: rotateY(280deg) translateZ(600px);
+        }
+        
+        #box li:nth-child(9) {
+            transform: rotateY(320deg) translateZ(600px);
+        }
+        /* li:nth-child(10) {
+            transform: rotateY(300deg) translateZ(300px);
+        }*/
+        
+        #box2 {
+            width: 250px;
+            height: 150px;
+            position: relative;
+            transform-style: preserve-3d;
+            margin: 100px 0 0 1000px;
+        }
+        
+        #box2 li {
+            width: 250px;
+            height: 150px;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        
+        #box2 li img {
+            width: 250px;
+            height: 150px;
+        }
+        
+        #box2 li:nth-child(1) {
+            transform: translateY(75px)
+        }
+        
+        #box2 li:nth-child(2) {
+            transform: rotateY(90deg) translateY(175px);
+        }
+        
+        #box2 li:nth-child(3) {
+            transform: rotateY(180deg) translateY(175px);
+        }
+        
+        #box2 li:nth-child(4) {
+            transform: rotateY(270deg) translateY(175px);
+        }
+        
+        #box2 li:nth-child(5) {
+            transform: rotateX(90deg) translateY(175px);
+        }
+        
+        #box2 li:nth-child(6) {
+            transform: rotateX(270deg) translateY(175px);
+        }
+        
+        @keyframes move {
+            0%,
+            100% {
+                transform: rotateY(0deg) rotateX(5deg);
+                top: 100px;
+                left: 100px;
+            }
+            20% {
+                transform: rotateY(72deg) rotateX(10deg);
+                top: 150px;
+                left: 150px;
+            }
+            40% {
+                transform: rotateY(144deg) rotateX(20deg);
+                top: 200px;
+                left: 200px;
+            }
+            60% {
+                transform: rotateY(216deg) rotateX(10deg);
+                top: 150px;
+                left: 150px;
+            }
+            80% {
+                transform: rotateY(288deg) rotateX(5deg);
+                top: 120px;
+                left: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="box1">
+        <ul id="box">
+            <li><img src="img/DSC_7376.JPG" alt=""></li>
+            <li><img src="img/DSC_7377.JPG" alt=""></li>
+            <li><img src="img/DSC_7378.JPG" alt=""></li>
+            <li><img src="img/DSC_7379.JPG" alt=""></li>
+            <li><img src="img/DSC_7380.JPG" alt=""></li>
+            <li><img src="img/DSC_7381.JPG" alt=""></li>
+            <li><img src="img/DSC_7382.JPG" alt=""></li>
+            <li><img src="img/DSC_7383.JPG" alt=""></li>
+            <li><img src="img/DSC_7384.JPG" alt=""></li>
+            <!--   <li><img src="img/t9.png" alt=""></li>-->
+            <!--<li><img src="img/t10.png" alt=""></li>-->
+        </ul>
+        <!-- <ul id="box2">
+            <li><img src="img/t10.png" alt=""></li>
+            <li><img src="img/t10.png" alt=""></li>
+            <li><img src="img/t10.png" alt=""></li>
+            <li><img src="img/t10.png" alt=""></li>
+            <li><img src="img/t10.png" alt=""></li>
+            <li><img src="img/t10.png" alt=""></li>
+        </ul>-->
+
+        <audio src="img/smalltime.mp3" autoplay loop="loop" id="demo" volume="0.2">
+           
+        </audio>
+    </div>
+
+</body>
+<script src="../js/jquery.js"></script>
+<script src="jq.mousewheel.js"></script>
+<script>
+</script>
+
+</html>
