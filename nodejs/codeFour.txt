@@ -1,0 +1,397 @@
+//const http = require('http');
+
+//const hostname = '192.168.10.240';
+
+//const port = 3000;
+
+/*var a = 0;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    console.log("我收到了一个请求！");
+    a++;
+    res.setHeader('Content-Type', 'text/stark');
+    res.end(a.toString() + 'Hello World stark \n');
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at  http://${hostname}:${port}/`);
+});*/
+////////////////////////////////////////////////////////////
+
+/*const http = require('http');
+const hostname = '192.168.10.240';
+const port = 3000;
+var a = 0;
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    console.log("我收到了一个请求!");
+    a++;
+    res.setHeader('Content-Type', 'text/stark');
+    res.end(a.toString() + 'hello world teris \n');
+
+});
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});*/
+
+/*const http = require('http');
+const hostname = '192.168.10.240';
+const port = 3000;
+var a = 0;
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    console.log("我收到一个请求");
+    a++;
+    res.setHeader('Content-Type', 'text/stark');
+    res.end(a.toString() + 'Hello World stark \n');
+});
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+})*/
+
+/*const http = require('http');
+const hostname = '192.168.10.240';
+const port = 3000;
+var a = 0;
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    console.log("我收到一个请求！");
+    a++;
+    res.setHeader('Content-Type', 'text/stark');
+    res.end(a.toString() + 'Hello World stark \n');
+});
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}`);
+})*/
+
+//////////////////////证明nodejs是单线程///////////////////
+
+/*const http = require('http');
+const hostname = '192.168.10.240';
+const port = 3000;
+const server = http.createServer((re1, res) => {
+    res.statusCode = 200;
+    var a = Math.random() * 1000;
+    console.log("我收到一个请求" + a);
+    res.setHeader('Content-Type', 'text/stark');
+    res.end(a.toString() + 'hello world stark \n');
+    if (a == 444) {
+        console.log(req.connection.remoteAddress);
+        throw new Error('代码发生错误！');
+    }
+});
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});
+
+*/
+
+/*const http = require('http');
+const hostname = '192.168.10.240';
+const port = 3000;
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    var a = parseInt(Math.random() * 1000);
+    console.log("我收到了一个请求！" + a);
+    res.setHeader('Content-Type', 'text/stark');
+    res.end(a.toString() + 'Hello World stark \n');
+    if (a = 222) {
+        console.log(req.connection.remoteAddress);
+        throw new Error('发生错误');
+    }
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});*/
+
+
+/*const http = require('http');
+const hostname = '192.168.10.240';
+const port = 3000;
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    var a = parseInt(Math.random() * 1000);
+    console.log("我收到了一个请求！" + a);
+    res.setHeader('Content-Type', 'text/stark');
+    res.end(a.toString() + 'Hello World stark \n');
+    if (a = 222) {
+        console.log(req.connection.remoteAddress);
+        throw new Error('发生错误');
+    }
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});*/
+
+
+
+//////////////nodejs非阻塞io/////////////////////
+
+/*const http = require('http');
+const fs = require('fs');
+const hostname = '192.168.10.240';
+const port = 3000;
+var date = new Date();
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    console.log(req.connection.remoteAddress + "进来了开始计算");
+    while (parseInt(Math.random() * 1000) != 632) {
+        console.log("继续抽奖中");
+    }
+    console.log(req.connection.remoteAddress + "2632出现了" + date);
+    fs.readFile("./h6.jpg", function(err, data) {
+        res.setHeader('Content-Type', 'image/jpeg');
+        console.log(req.connection.remoteAddress + "读取图片完毕");
+    })
+
+
+})
+
+server.listen(port, hostname, () => {
+    console.log(`Server Running at http://${hostname}:${port}/`)
+})
+*/
+
+
+/*const http = require('http');
+const fs = require('fs');
+const hostname = '192.168.10.240';
+const port = 3000;
+var date = new Date();
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    console.log(req.connection.remoteAddress + "进来了开始计算");
+    while (parseInt(Math.random() * 1000) != 632) {
+        console.log("继续抽奖中");
+    }
+    console.log(req.connection.remoteAddress + "2632出现了" + date);
+    fs.readFile("./h6.jpg", function(err, data) {
+        res.setHeader('Content-Type', 'image/jpeg');
+        console.log(req.connection.remoteAddress + "读取图片完毕");
+    })
+
+
+})
+
+server.listen(port, hostname, () => {
+    console.log(`Server Running at http://${hostname}:${port}/`)
+})
+
+*/
+
+/*const http = require('http');
+const fs = require('fs');
+const hostname = '192.168.10.240';
+const port = 3000;
+var date = new Date();
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    console.log(req.connection.remoteAddress + "进来了开始计算");
+    while (parseInt(Math.random() * 1000) != 632) {
+        console.log("继续抽奖中");
+    }
+    console.log(req.connection.remoteAddress + "2632出现了" + date);
+    fs.readFile("./h6.jpg", function(err, data) {
+        res.setHeader('Content-Type', 'image/jpeg');
+        console.log(req.connection.remoteAddress + "读取图片完毕");
+    })
+
+
+})
+
+server.listen(port, hostname, () => {
+    console.log(`Server Running at http://${hostname}:${port}/`)
+})*/
+
+
+///////路由/////////
+/*const http = require('http');
+const fs = require('fs');
+const hostname = '192.168.10.240';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    if (req.url == '/stark') {
+        res.end("{username:'teris',age:'22'");
+    } else if (req.url == '/hehe') {
+        res.end("呵你个头");
+    } else if (req.url == '/img') {
+        fs.readFile('h6.jpg', function(err, data) {
+            res.setHeader('Content-Type', 'image/jpeg');
+            res.end(data);
+        })
+    } else {
+        res.end('hi,boy!走错厕所了！')
+    }
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});*/
+
+
+/*const http = require('http');
+const fs = require('fs');
+const hostname = '192.168.10.240';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    if (req.url == '/stark') {
+        res.end("{username:'teris',age:'22'");
+    } else if (req.url == '/hehe') {
+        res.end("呵你个头");
+    } else if (req.url == '/img') {
+        fs.readFile('h6.jpg', function(err, data) {
+            res.setHeader('Content-Type', 'image/jpeg');
+            res.end(data);
+        })
+    } else {
+        res.end('hi,boy!走错厕所了！')
+    }
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});*/
+
+
+/*const http = require('http');
+const fs = require('fs');
+const hostname = '192.168.10.240';
+const port = 3000;
+
+const server = http.createServer((req, res) => {
+    res.statusCode = 200;
+    if (req.url == '/stark') {
+        res.end("{username:'teris',age:'22'");
+    } else if (req.url == '/hehe') {
+        res.end("呵你个头");
+    } else if (req.url == '/img') {
+        fs.readFile('h6.jpg', function(err, data) {
+            res.setHeader('Content-Type', 'image/jpeg');
+            res.end(data);
+        })
+    } else {
+        res.end('hi,boy!走错厕所了！')
+    }
+});
+
+server.listen(port, hostname, () => {
+    console.log(`Server running at http://${hostname}:${port}/`);
+});*/
+
+
+////////////req对象//////////
+/*const http = require('http');
+const server = http.createServer(function(req, res) {
+    console.log(req.headers);
+    console.log(req.headers['user-agent']);
+    console.log(req.httpVersion);
+    console.log(req.method);
+    res.setHeader("Content-Type", "text/html;charset=UTF-8");
+    if (req.method.toLocaleLowerCase() == 'get') {
+        res.end("对不起，你无权查看！2222");
+    } else if (req.method.toLocaleLowerCase() == "post") {
+        res.end("你可以尽情的查看信息了");
+    }
+    console.log(req.url);
+    res.end('stark');
+})
+server.listen(3000, "localhost");
+console.log("服务器正运行在3000端口");*/
+
+/*const http = require('http');
+const server = http.createServer(function(req, res) {
+    console.log(req.headers);
+    console.log(req.headers['user-agent']);
+    console.log(req.httpVersion);
+    console.log(req.method);
+    res.setHeader("Content-Type", "text/html;charset=UTF-8");
+    if (req.method.toLocaleLowerCase() == 'get') {
+        res.end("对不起，你无权查看！2222");
+    } else if (req.method.toLocaleLowerCase() == "post") {
+        res.end("你可以尽情的查看信息了");
+    }
+    console.log(req.url);
+    res.end('stark');
+})
+server.listen(3000, "localhost");
+console.log("服务器正运行在3000端口");*/
+
+
+/*const http = require('http');
+const server = http.createServer(function(req, res) {
+    console.log(req.headers);
+    console.log(req.headers['user-agent']);
+    console.log(req.httpVersion);
+    console.log(req.method);
+    res.setHeader("Content-Type", "text/html;charset=UTF-8");
+    if (req.method.toLocaleLowerCase() == 'get') {
+        res.end("对不起，你无权查看！2222");
+    } else if (req.method.toLocaleLowerCase() == "post") {
+        res.end("你可以尽情的查看信息了");
+    }
+    console.log(req.url);
+    res.end('stark');
+})
+server.listen(3000, "localhost");
+console.log("服务器正运行在3000端口");*/
+
+
+/*var http = require('http');
+var server = http.createServer(function(req, res) {
+    res.writeHead(269, { "Content-Type": "text/plain" })
+    res.write("<h1>hehe </h1>");
+    res.end('111');
+})
+server.listen(3000, "localhost");
+console.log("服务器已经运行在3000端口");*/
+
+/*var http = require('http');
+var server = http.createServer(function(req, res) {
+    res.writeHead(269, { "Content-Type": "text/plain" })
+    res.write("<h1>hehe </h1>");
+    res.end('111');
+})
+server.listen(3000, "localhost");
+console.log("服务器已经运行在3000端口");*/
+
+
+/*var http = require('http');
+var server = http.createServer(function(req, res) {
+    res.writeHead(269, { "Content-Type": "text/plain" })
+    res.write("<h1>hehe </h1>");
+    res.end('111');
+})
+server.listen(3000, "localhost");
+console.log("服务器已经运行在3000端口");*/
+
+
+//////////////url和querststring////////
+
+/*var url = require('url');
+var querstring = require('querystring');
+var obj = url.parse("http://localhost:3000/index.html?username=stark&age=18");
+let query = obj.query;
+var obj1 = querstring.parse(query);
+console.log(obj1);*/
+
+
+/*var url = require('url');
+var querstring = require('querystring');
+var obj = url.parse("http://localhost:3000/index.html?username=stark&age=18");
+let query = obj.query;
+var obj1 = querstring.parse(query);
+console.log(obj1);*/
+
+/*var url = require('url');
+var querstring = require('querystring');
+var obj = url.parse("http://localhost:3000/index.html?username=stark&age=18");
+let query = obj.query;
+var obj1 = querstring.parse(query);
+console.log(obj1);*/
